@@ -52,6 +52,11 @@ REST_FRAMEWORK = {
 # Use custom user model
 AUTH_USER_MODEL = 'user.User'
 
+AUTHENTICATION_BACKENDS = [
+    'user.backends.PhoneNumberBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 
 
 MIDDLEWARE = [
